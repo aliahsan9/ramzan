@@ -25,7 +25,10 @@ export class ProjectsComponent implements OnInit {
     { title: 'Office Admin CV', category: 'Administration', image: 'assets/projects/cv2.webp' },
     { title: 'IT CV', category: 'IT', image: 'assets/projects/cv3.webp' },
     { title: 'Customer Service CV', category: 'Customer Service', image: 'assets/projects/cv4.webp' },
-    { title: 'Engineer CV', category: 'Technical', image: 'assets/projects/cv5.webp' }
+    { title: 'Engineer CV', category: 'Technical', image: 'assets/projects/cv5.webp' },
+    { title: 'Engineer CV', category: 'Technical', image: 'assets/projects/cv6.webp' },
+    { title: 'Engineer CV', category: 'Technical', image: 'assets/projects/cv7.webp' },
+    { title: 'Engineer CV', category: 'Technical', image: 'assets/projects/cv8.webp' },
   ];
 
   categories: string[] = [];

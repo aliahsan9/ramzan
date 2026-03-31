@@ -58,6 +58,7 @@
       background: radial-gradient(circle, rgba(250,204,21,0.2), transparent);
       filter: blur(120px);
       top: 10%;
+      pointer-events: none;
     }
   }
 
@@ -119,6 +120,7 @@
   .card {
     background: #111827;
     padding: 25px;
+    color: white;
     border-radius: 16px;
     transition: 0.3s;
 

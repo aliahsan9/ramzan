@@ -1,1 +1,56 @@
-<p>projects works!</p>
+<div class="projects-page">
+
+  <!-- HERO -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>My <span>Portfolio</span></h1>
+      <p>Explore professional CV samples crafted for real clients</p>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filters text-center">
+    <div class="container">
+      <button 
+        class="filter-btn"
+        [class.active]="selectedCategory === 'All'"
+        (click)="filterProjects('All')">
+        All
+      </button>
+
+      <button 
+        class="filter-btn"
+        *ngFor="let cat of categories"
+        [class.active]="selectedCategory === cat"
+        (click)="filterProjects(cat)">
+        {{cat}}
+      </button>
+    </div>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="projects container">
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6" *ngFor="let project of filteredProjects">
+        <div class="project-card" (click)="openPreview(project.image)">
+
+          <img [src]="project.image" alt="CV Sample" />
+
+          <div class="overlay">
+            <h5>{{project.title}}</h5>
+            <p>{{project.category}}</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL PREVIEW -->
+  <div class="preview-modal" *ngIf="selectedImage" (click)="closePreview()">
+    <img [src]="selectedImage" />
+  </div>
+
+</div>

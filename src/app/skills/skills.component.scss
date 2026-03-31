@@ -1,0 +1,93 @@
+.skills-page {
+  font-family: 'Poppins', sans-serif;
+  background: #0b1220;
+  color: #e6edf3;
+
+  section {
+    padding: 70px 20px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+
+    span {
+      background: linear-gradient(90deg, #facc15, #f59e0b);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  p {
+    color: #9ca3af;
+  }
+
+  /* HERO */
+  .hero {
+    background: radial-gradient(circle at top, #1e293b, #020617);
+  }
+
+  /* FILTERS */
+  .filters {
+    .filter-btn {
+      margin: 5px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 1px solid #facc15;
+      background: transparent;
+      color: #facc15;
+      transition: 0.3s;
+
+      &.active,
+      &:hover {
+        background: #facc15;
+        color: #000;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  /* SKILL CARD */
+  .skill-card {
+    background: #111827;
+    padding: 25px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+
+    h5 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    /* PROGRESS BAR */
+    .progress {
+      height: 8px;
+      background: #1f2937;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #facc15, #f59e0b);
+        transition: width 1s ease-in-out;
+      }
+    }
+
+    .level {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 12px;
+      color: #facc15;
+    }
+  }
+}

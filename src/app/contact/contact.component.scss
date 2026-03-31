@@ -1,0 +1,123 @@
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+  background: #0b1220;
+  color: #e6edf3;
+
+  section {
+    padding: 80px 20px;
+  }
+
+  h1 span {
+    background: linear-gradient(90deg, #facc15, #f59e0b);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* HERO */
+  .hero {
+    background: radial-gradient(circle at top, #1e293b, #020617);
+
+    p {
+      color: #9ca3af;
+    }
+  }
+
+  /* INFO CARDS */
+  .info-card {
+    background: #111827;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: default;
+
+    i {
+      font-size: 28px;
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    h5 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    &.clickable {
+      cursor: pointer;
+
+      &:hover {
+        background: #1f2937;
+      }
+    }
+  }
+
+  /* SOCIALS */
+  .socials {
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #111827;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #facc15;
+        transition: 0.3s;
+
+        &:hover {
+          background: #facc15;
+          color: #000;
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(250,204,21,0.4);
+        }
+      }
+    }
+  }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, #1e293b, #020617);
+
+    p {
+      color: #9ca3af;
+      margin: 10px 0 25px;
+    }
+  }
+
+  /* BUTTON */
+  .btn-primary {
+    background: linear-gradient(135deg, #facc15, #f59e0b);
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(250,204,21,0.4);
+    }
+  }
+}

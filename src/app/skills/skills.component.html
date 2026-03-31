@@ -1,1 +1,57 @@
-<p>skills works!</p>
+<div class="skills-page">
+
+  <!-- HERO -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>My <span>Skills</span></h1>
+      <p>Professional expertise built over 10+ years</p>
+    </div>
+  </section>
+
+  <!-- FILTER BUTTONS -->
+  <section class="filters text-center">
+    <div class="container">
+      <button 
+        class="filter-btn"
+        [class.active]="selectedCategory === 'All'"
+        (click)="filterSkills('All')">
+        All
+      </button>
+
+      <button 
+        class="filter-btn"
+        *ngFor="let cat of categories"
+        [class.active]="selectedCategory === cat"
+        (click)="filterSkills(cat)">
+        {{cat}}
+      </button>
+    </div>
+  </section>
+
+  <!-- SKILLS GRID -->
+  <section class="skills container">
+    <div class="row g-4">
+
+      <div class="col-md-4 col-sm-6" *ngFor="let skill of filteredSkills">
+        <div class="skill-card">
+
+          <h5>{{skill.name}}</h5>
+          <p>{{skill.description}}</p>
+
+          <!-- PROGRESS -->
+          <div class="progress">
+            <div 
+              class="progress-bar"
+              [style.width.%]="skill.level">
+            </div>
+          </div>
+
+          <span class="level">{{skill.level}}%</span>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>

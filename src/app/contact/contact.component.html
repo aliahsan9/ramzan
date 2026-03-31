@@ -1,1 +1,88 @@
-<p>contact works!</p>
+<div class="contact-page">
+
+  <!-- HERO -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Get In <span>Touch</span></h1>
+      <p>Let’s connect and build your job-winning CV</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO -->
+  <section class="contact-info container">
+    <div class="row g-4 justify-content-center">
+
+      <!-- EMAIL -->
+      <div class="col-md-4 col-sm-6">
+        <div class="info-card">
+          <i class="bi bi-envelope"></i>
+          <h5>Email</h5>
+          <p>{{email}}</p>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="col-md-4 col-sm-6">
+        <div class="info-card">
+          <i class="bi bi-telephone"></i>
+          <h5>Phone</h5>
+          <p>{{phone}}</p>
+        </div>
+      </div>
+
+      <!-- WHATSAPP -->
+      <div class="col-md-4 col-sm-6">
+        <div class="info-card clickable" (click)="openWhatsApp()">
+          <i class="bi bi-whatsapp"></i>
+          <h5>WhatsApp</h5>
+          <p>{{whatsapp}}</p>
+        </div>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="col-md-4 col-sm-6">
+        <div class="info-card">
+          <i class="bi bi-geo-alt"></i>
+          <h5>Location</h5>
+          <p>{{address}}</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOCIAL LINKS -->
+  <section class="socials text-center">
+    <div class="container">
+      <h2>Connect With Me</h2>
+
+      <div class="social-icons">
+        <a [href]="socials.facebook" target="_blank">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a [href]="socials.linkedin" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a (click)="openWhatsApp()">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+
+        <a [href]="'mailto:' + email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta text-center">
+    <div class="container">
+      <h2>Ready to Get Hired?</h2>
+      <p>Contact me today and get your professional CV ready.</p>
+      <a (click)="openWhatsApp()" class="btn-primary">Message on WhatsApp</a>
+    </div>
+  </section>
+
+</div>

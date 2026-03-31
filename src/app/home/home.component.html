@@ -1,70 +1,86 @@
-<!-- HOME PAGE CONTAINER -->
-<div class="home-page text-light">
+<div class="home-page">
 
-  <!-- HERO SECTION -->
-  <section class="hero d-flex align-items-center justify-content-center text-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold mb-3">Professional CV & Resume Writer</h1>
-      <p class="lead mb-4">
-        Over 10 years of experience creating modern, ATS-friendly CVs for Gulf & European markets
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content container text-center">
+      <h1>
+        Build a <span>Job-Winning CV</span><br />
+        That Gets You Hired
+      </h1>
+
+      <p>
+        ATS-optimized, modern CVs crafted for Gulf & European job markets.
+        Stand out. Get shortlisted. Get hired.
       </p>
-      <a routerLink="/contact" class="btn btn-warning btn-lg shadow-lg">Get Your CV Now</a>
+
+      <div class="hero-actions">
+        <a routerLink="/contact" class="btn-primary">Get Started</a>
+        <a href="#" class="btn-outline">View Samples</a>
+      </div>
     </div>
+
+    <div class="hero-glow"></div>
   </section>
 
-  <!-- ABOUT ME SECTION -->
-  <section class="about py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">About Me</h2>
-      <p class="text-center lead">
-        I am a highly experienced CV Maker with over 10 years of professional experience in creating modern, ATS-friendly, and European-style CVs. 
-        I specialize in designing CVs for candidates applying in Dubai, Gulf countries, and European markets.
+  <!-- ABOUT -->
+  <section class="about container">
+    <div class="about-box">
+      <h2>About Me</h2>
+      <p>
+        With 10+ years of experience, I specialize in crafting powerful,
+        ATS-friendly CVs tailored for Dubai, Gulf, and European markets.
+        Every CV is designed to highlight your strengths and maximize your
+        chances of landing interviews.
       </p>
     </div>
   </section>
 
-  <!-- SKILLS SECTION -->
-  <section class="skills py-5 bg-dark-blue">
+  <!-- SKILLS -->
+  <section class="skills">
     <div class="container">
-      <h2 class="text-center mb-4">Skills</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-3 col-sm-6 skill-card" *ngFor="let skill of skills">
-          <div class="card bg-primary text-light shadow-lg h-100 p-3 text-center">
-            <h5 class="card-title mb-3">{{skill.name}}</h5>
-            <p class="card-text">{{skill.description}}</p>
-          </div>
-        </div>
-      </div>
-    </div> 
-  </section>
+      <h2>Core Expertise</h2>
 
-  <!-- SERVICES SECTION -->
-  <section class="services py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Our Services</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4 service-card" *ngFor="let service of services">
-          <div class="card shadow-lg h-100 p-4 text-center">
-            <h5 class="mb-3">{{service.title}}</h5>
-            <p>{{service.description}}</p>
-          </div>
+      <div class="grid">
+        <div class="card" *ngFor="let skill of skills">
+          <h4>{{skill.name}}</h4>
+          <p>{{skill.description}}</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US SECTION -->
-  <section class="why-choose bg-dark-blue py-5">
+  <!-- SERVICES -->
+  <section class="services container">
+    <h2>Services</h2>
+
+    <div class="grid">
+      <div class="card glass" *ngFor="let service of services">
+        <h4>{{service.title}}</h4>
+        <p>{{service.description}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="why">
     <div class="container">
-      <h2 class="text-center mb-4">Why Choose Us</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-3 col-sm-6" *ngFor="let reason of whyChooseUs">
-          <div class="card text-light bg-primary shadow-lg h-100 p-3 text-center">
-            <h5 class="mb-3">{{reason.title}}</h5>
-            <p>{{reason.description}}</p>
-          </div>
+      <h2>Why Choose Me</h2>
+
+      <div class="grid">
+        <div class="card highlight" *ngFor="let reason of whyChooseUs">
+          <h4>{{reason.title}}</h4>
+          <p>{{reason.description}}</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container text-center">
+      <h2>Ready to Upgrade Your Career?</h2>
+      <p>Get your professional CV today and start landing interviews.</p>
+      <a routerLink="/contact" class="btn-primary">Create My CV</a>
     </div>
   </section>
 

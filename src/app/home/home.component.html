@@ -2,30 +2,48 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content container text-center">
-      <h1>
-        Build a <span>Job-Winning CV</span><br />
-        That Gets You Hired
-      </h1>
+    <div class="container">
 
-      <p>
-        ATS-optimized, modern CVs crafted for Gulf & European job markets.
-        Stand out. Get shortlisted. Get hired.
-      </p>
+      <div class="hero-wrapper">
 
-      <div class="hero-actions">
-        <a routerLink="/contact" class="btn-primary">Get Started</a>
-        <a routerLink="/projects" class="btn-outline">View Samples</a>
+        <!-- LEFT CONTENT -->
+        <div class="hero-left">
+
+          <h1>
+            Build a <span>Job-Winning CV</span>
+            That Gets You Hired
+          </h1>
+
+          <p>
+            ATS-optimized, modern CVs crafted for Gulf & European job markets.
+            Stand out. Get shortlisted. Get hired faster.
+          </p>
+
+          <div class="hero-actions">
+            <a routerLink="/contact" class="btn-primary">Get Started</a>
+            <a routerLink="/projects" class="btn-outline">View Samples</a>
+          </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-right">
+          <div class="image-wrapper">
+            <img src="assets/profile.webp" alt="Profile" />
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="hero-glow"></div>
+    </div>
   </section>
-    <app-about></app-about>
-    <app-skills></app-skills>
-    <app-projects></app-projects>
-    <app-contact></app-contact>
-  
+
+  <!-- OTHER SECTIONS -->
+  <app-about></app-about>
+  <app-skills></app-skills>
+  <app-projects></app-projects>
+  <app-contact></app-contact>
+
   <!-- CTA -->
   <section class="cta">
     <div class="container text-center">

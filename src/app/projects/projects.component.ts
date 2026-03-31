@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/* Interface */
 interface Project {
   title: string;
   category: string;
@@ -17,61 +16,44 @@ interface Project {
 })
 export class ProjectsComponent implements OnInit {
 
-  selectedCategory: string = 'All';
+  selectedCategory = 'All';
   selectedImage: string | null = null;
 
+  // 🔥 IMPORTANT: use correct asset path
   projects: Project[] = [
-    {
-      title: 'Driver CV',
-      category: 'Driving',
-      image: 'assets/projects/cv1.webp'
-    },
-    {
-      title: 'Office Admin CV',
-      category: 'Administration',
-      image: 'assets/projects/cv2.webp'
-    },
-    {
-      title: 'IT Professional CV',
-      category: 'IT',
-      image: 'assets/projects/cv3.webp'
-    },
-    {
-      title: 'Customer Service CV',
-      category: 'Customer Service',
-      image: 'assets/projects/cv4.webp'
-    },
-    {
-      title: 'Engineer CV',
-      category: 'Technical',
-      image: 'assets/projects/cv5.webp'
-    }
+    { title: 'Driver CV', category: 'Driving', image: 'assets/projects/cv1.webp' },
+    { title: 'Office Admin CV', category: 'Administration', image: 'assets/projects/cv2.webp' },
+    { title: 'IT CV', category: 'IT', image: 'assets/projects/cv3.webp' },
+    { title: 'Customer Service CV', category: 'Customer Service', image: 'assets/projects/cv4.webp' },
+    { title: 'Engineer CV', category: 'Technical', image: 'assets/projects/cv5.webp' }
   ];
 
   categories: string[] = [];
   filteredProjects: Project[] = [];
 
   ngOnInit(): void {
-    this.categories = [...new Set(this.projects.map(p => p.category))];
+    this.categories = ['All', ...new Set(this.projects.map(p => p.category))];
     this.filteredProjects = [...this.projects];
   }
 
-  filterProjects(category: string): void {
+  filterProjects(category: string) {
     this.selectedCategory = category;
 
-    if (category === 'All') {
-      this.filteredProjects = [...this.projects];
-    } else {
-      this.filteredProjects = this.projects.filter(p => p.category === category);
-    }
+    this.filteredProjects = category === 'All'
+      ? this.projects
+      : this.projects.filter(p => p.category === category);
   }
 
-  openPreview(image: string): void {
+  openPreview(image: string) {
     this.selectedImage = image;
   }
 
-  closePreview(): void {
+  closePreview() {
     this.selectedImage = null;
   }
 
+  // 🔥 FIX IMAGE ERROR
+  handleImageError(event: any) {
+    event.target.src = 'assets/projects/placeholder.png';
+  }
 }

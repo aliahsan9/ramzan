@@ -4,7 +4,7 @@
   <section class="hero text-center">
     <div class="container">
       <h1>My <span>Portfolio</span></h1>
-      <p>Explore professional CV samples crafted for real clients</p>
+      <p>Premium CV designs crafted for real-world success</p>
     </div>
   </section>
 
@@ -12,15 +12,8 @@
   <section class="filters text-center">
     <div class="container">
       <button 
-        class="filter-btn"
-        [class.active]="selectedCategory === 'All'"
-        (click)="filterProjects('All')">
-        All
-      </button>
-
-      <button 
-        class="filter-btn"
         *ngFor="let cat of categories"
+        class="filter-btn"
         [class.active]="selectedCategory === cat"
         (click)="filterProjects(cat)">
         {{cat}}
@@ -32,23 +25,32 @@
   <section class="projects container">
     <div class="row g-4">
 
-      <div class="col-lg-4 col-md-6" *ngFor="let project of filteredProjects">
-        <div class="project-card" (click)="openPreview(project.image)">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6"
+           *ngFor="let project of filteredProjects">
 
-          <img [src]="project.image" alt="CV Sample" />
+        <div class="project-card">
 
-          <div class="overlay">
-            <h5>{{project.title}}</h5>
-            <p>{{project.category}}</p>
+          <div class="img-box" (click)="openPreview(project.image)">
+            <img 
+              [src]="project.image"
+              (error)="handleImageError($event)"
+              alt="project"
+            />
+
+            <div class="overlay">
+              <h5>{{project.title}}</h5>
+              <span>{{project.category}}</span>
+            </div>
           </div>
 
         </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- MODAL PREVIEW -->
+  <!-- PREVIEW MODAL -->
   <div class="preview-modal" *ngIf="selectedImage" (click)="closePreview()">
     <img [src]="selectedImage" />
   </div>

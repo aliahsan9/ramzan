@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 })
 export class AtsComponent {
 
-  score = 65;
+  score = 98;
 
   features = [
     {
